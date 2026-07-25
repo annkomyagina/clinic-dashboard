@@ -28,15 +28,13 @@
 
 ## Быстрый старт
 
-```bash
 git clone https://github.com/annkomyagina/clinic-dashboard.git
 cd clinic-dashboard
 docker-compose up -d
 
-
 Открыть в браузере: http://localhost:8501
 
-Структура проекта:
+## Структура проекта
 
 clinic-dashboard/
 ├── data/                  # Сгенерированные данные
@@ -51,6 +49,3 @@ clinic-dashboard/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
-
-
-
