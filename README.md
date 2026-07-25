@@ -36,7 +36,7 @@ docker-compose up -d
 
 ## Структура проекта
 
-``clinic-dashboard/
+```clinic-dashboard/
 ├── data/                  # Сгенерированные данные
 ├── sql/                   # SQL-скрипты
 │   ├── schema.sql         # Создание таблиц
@@ -48,4 +48,4 @@ docker-compose up -d
 ├── app.py                 # Streamlit-дашборд
 ├── Dockerfile
 ├── docker-compose.yml
-└── README.md``
+└── README.md```
