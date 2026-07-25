@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: clinic_db
+    environment:
+      POSTGRES_DB: clinic_db
+      POSTGRES_USER: clinic_user
+      POSTGRES_PASSWORD: clinic_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+
+  app:
+    build: .
+    container_name: clinic_app
+    ports:
+      - "8501:8501"
+    environment:
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
